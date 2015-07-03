@@ -32,7 +32,10 @@ public class ParsingResource {
         ObjectMapper mapper = new ObjectMapper();
         ObjectWriter printer = mapper.writerWithDefaultPrettyPrinter();
         try {
-            Mf2Parser parser = new Mf2Parser();
+            Mf2Parser parser = new Mf2Parser()
+                .setIncludeAlternates(true)
+                .setIncludeRelUrls(true);
+            
             try {
                 return printer.writeValueAsString(parser.parse(html, new URI(url)));
             } catch (URISyntaxException e) {
