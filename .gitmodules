@@ -1,3 +1,3 @@
 [submodule "mf2j"]
 	path = mf2j
-	url = git@github.com:kylewm/mf2j.git
+	url = https://github.com/kylewm/mf2j.git
